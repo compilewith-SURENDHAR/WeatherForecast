@@ -13,6 +13,14 @@ export const styles = StyleSheet.create({
       margin : 8,
       padding : 15
     },
+    searchBar : {
+        height : 12,
+        width : 250,
+        borderColor : 'grey',
+        borderWidth : 1,
+        color : 'white',
+        fontSize : 20
+    },
     date : {
         fontSize : 25,
         color : 'white',
