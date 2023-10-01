@@ -1,4 +1,5 @@
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Keyboard, SafeAreaView, ScrollView, StyleSheet, Text, 
+  TextInput, TouchableWithoutFeedback, View } from 'react-native'
 import React from 'react'
 import { styles } from './styles';
 
@@ -14,14 +15,16 @@ export default function App() {
   function search() {}
 
   return (
+    <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
     <SafeAreaView style = {styles.container}>
       <View style = {styles.top}>
-      <TextInput
-        style={styles.searchBar}
-        placeholder="enter city"
-        //onChangeText={setText}
-        onSubmitEditing={search}
-      />
+        <View style = {styles.searchBar}>
+          <TextInput
+          style={styles.input}
+          placeholder="enter city"
+          onSubmitEditing={search}  
+          />
+        </View>
         <Text style = {styles.date}>date</Text>
         <Text style = {styles.temperature}>temperature</Text>
         <Text style = {styles.climate}>climate</Text>
@@ -35,6 +38,8 @@ export default function App() {
         <View style = {styles.details}></View>
       </View>
     </SafeAreaView>
+    </TouchableWithoutFeedback>
   )
 }
+
 

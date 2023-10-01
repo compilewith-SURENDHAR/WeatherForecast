@@ -14,12 +14,19 @@ export const styles = StyleSheet.create({
       padding : 15
     },
     searchBar : {
-        height : 12,
-        width : 250,
+        height : 45,
+        width : 265,
         borderColor : 'grey',
         borderWidth : 1,
         color : 'white',
-        fontSize : 20
+        borderRadius : 5,
+        backgroundColor : 'grey',
+        alignContent : 'center'
+    },
+    input : {
+        fontSize : 20,
+        color : 'white',
+        paddingLeft : 7
     },
     date : {
         fontSize : 25,
